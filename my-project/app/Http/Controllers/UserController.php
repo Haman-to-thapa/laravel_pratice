@@ -9,11 +9,18 @@ class UserController extends Controller
    function addUser(Request $request)
 {
     $request->validate([
-        'city' => 'required',
-        'gender' => 'required',
+        'city' => 'required | min:3 | max:15',
+        'gender' => 'required | email',
         'skill' => 'required',
         'age' => 'required',
+    ],[
+
+    'age.required'=>'age must be 18+'
+
+
     ]);
+
+
 
     echo $request->city;
     echo "<br>";
