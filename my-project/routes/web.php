@@ -42,3 +42,6 @@ Route::get('about/{name}',"about");
 // Route::get('about/{name}',[StudentController::class,"about"]);
 
 // Route::view('about','about');
+
+
+Route::view('newHome',"NewHome");
