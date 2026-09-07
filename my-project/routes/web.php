@@ -6,6 +6,9 @@ use App\Http\Controllers\UserController;
 
 use App\Http\Controllers\HomeController;
 
+
+use App\Http\Controllers\StudentController;
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -24,4 +27,18 @@ Route::get('add',[HomeController::class,"add"]);
 });
 
 
-Route::view('about','about');
+// Route::get('adding',[StudentController::class,'adding']);
+// Route::get('showing',[StudentController::class,'showing']);
+// Route::get('delete',[StudentController::class,'delete']);
+
+Route::controller(StudentController::class)->group(function() {
+    
+Route::get('adding','adding');
+Route::get('showing','showing');
+Route::get('delete','delete');
+Route::get('about/{name}',"about");
+});
+
+// Route::get('about/{name}',[StudentController::class,"about"]);
+
+// Route::view('about','about');
