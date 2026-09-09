@@ -9,6 +9,13 @@ use App\Http\Controllers\HomeController;
 
 use App\Http\Controllers\StudentController;
 
+
+use App\Http\Middleware\AgesChecks;
+use app\Http\Middleware\CountrysChecks;
+
+
+
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -52,7 +59,12 @@ Route::view('newHome',"NewHome");
 // Route::view('homeView','homeView')->middleware('check1');
 // Route::view("aboutView","aboutView")->middleware('check1');
 
-Route::middleware('check1')->group(function(){
-Route::view('homeView','homeView');
-Route::view("aboutView","aboutView");
-});
+// Route::middleware('check1')->group(function(){
+// Route::view('homeView','homeView');
+// Route::view("aboutView","aboutView");
+// });
+
+
+Route::view('AboutViewPage',"AboutViewPage")->middleware(AgesChecks::class);
+
+Route::view('HomeViewss','HomeV')->middleware([AgesChecks::class,CountrysChecks::class]);
