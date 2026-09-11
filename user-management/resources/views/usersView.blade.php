@@ -1,0 +1,48 @@
+<div>
+    <!-- The biggest battle is the war against ignorance. - Mustafa Kemal Atatürk -->
+    <h1>User Data</h1>
+    {{print_r($data)}}
+
+    <ul>
+    <li>
+    <span>Name:</span>
+    <span>
+    <br>
+    {{$data->name}}
+    </br>
+    </span>
+    </li>
+        <li>
+    <span>UserName:</span>
+    <span>
+    <br>
+    {{$data->username}}
+    </br>
+    </span>
+    </li>
+        <li>
+    <span>email:</span>
+    <span>
+    <br>
+    {{$data->email}}
+    </br>
+    </span>
+    </li>
+        <li>
+    <span>Name:</span>
+    <span>
+    <br>
+    {{$data->name}}
+    </br>
+    </span>
+    </li>
+        <li>
+    <span>Name:</span>
+    <span>
+    <br>
+    {{$data->name}}
+    </br>
+    </span>
+    </li>
+    </ul>
+</div>
