@@ -19,3 +19,8 @@ Route::get('/students',[StudentController::class,"getStudent"]);
 Route::get("usersView",[UserController::class,"getUser"]);
 
 Route::get('queires',[UserController::class,'queires']);
+
+// Route::get('newUser',[UserController::class,'get']);
+Route::view('form', 'users');
+
+Route::get('newUser', [UserController::class, 'get']);

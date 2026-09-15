@@ -9,6 +9,11 @@ use App\Models\User;
 
 class UserController extends Controller
 {
+
+  
+  function get(Request $req){
+    return $req;
+  }
     //
     // function users() {
     //     // return"User function";
@@ -25,7 +30,7 @@ class UserController extends Controller
     //    return view('usersView',['data' => json_decode($response)]);
     // }
 
-    function queires() {
+    // function queires() {
 
         // $result = DB::table('users')->get();
 
@@ -67,6 +72,8 @@ class UserController extends Controller
     // } else {
     //     return 'data was not updated';
     // }
-    }
+
+
+    // }
 
 }
