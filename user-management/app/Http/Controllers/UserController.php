@@ -9,18 +9,58 @@ use Illuminate\Support\Facades\Http;
 class UserController extends Controller
 {
     //
-    function users() {
-        // return"User function";
-        // return DB::select('select * from users');
+    // function users() {
+    //     // return"User function";
+    //     // return DB::select('select * from users');
 
-        $users = DB::select('select * from users');
-        return view('users',['users'=>$users]);
+    //     $users = DB::select('select * from users');
+    //     return view('users',['users'=>$users]);
+    // }
+
+    // function getUser() {
+    //     $response = Http::get('https://jsonplaceholder.typicode.com/users/1');
+
+    //    $response = $response->body();
+    //    return view('usersView',['data' => json_decode($response)]);
+    // }
+
+    function queires() {
+
+        // $result = DB::table('users')->get();
+
+        // $result = [$result];
+        // return view('users',['users' => $result]);
+
+        // return $result;
+
+        // $result = DB::table('users') -> insert([
+        //     'name'=>"haman",
+        //     'email'=>'tony@test.com',
+        //     'phone'=>'111111'
+        // ]);
+        // if($result){
+        //     return 'Date inserted';
+        // } else {
+        //     return "data not inerted";
+        // }
+
+        // update
+
+        //   $result = DB::table('users') -> where('name','haman')->update(['phone' => 2222]);
+        // if($result){
+        //     return 'Date updated';
+        // } else {
+        //     return "data not updated";
+        // }
+
+      $result = DB::table('users') -> where('name','haman')->delete();
+        if($result){
+            return 'Date deleted';
+        } else {
+            return "data not deleted";
+        }
+
+
     }
 
-    function getUser() {
-        $response = Http::get('https://jsonplaceholder.typicode.com/users/1');
-
-       $response = $response->body();
-       return view('usersView',['data' => json_decode($response)]);
-    }
 }
