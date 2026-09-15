@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Http;
+use App\Models\User;
 
 class UserController extends Controller
 {
@@ -53,14 +54,19 @@ class UserController extends Controller
         //     return "data not updated";
         // }
 
-      $result = DB::table('users') -> where('name','haman')->delete();
-        if($result){
-            return 'Date deleted';
-        } else {
-            return "data not deleted";
-        }
+    //   $result = DB::table('users') -> where('name','haman')->delete();
+    //     if($result){
+    //         return 'Date deleted';
+    //     } else {
+    //         return "data not deleted";
+    //     }
 
-
+    // $response = User::where('name','kay')->update(['phone','9999']);
+    // if($response) {
+    //     return 'data updated';
+    // } else {
+    //     return 'data was not updated';
+    // }
     }
 
 }
