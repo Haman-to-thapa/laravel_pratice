@@ -23,8 +23,12 @@
 
     <h1>User Form</h1>
 
-<form action="/newUser" method="get">
+<form action="/newUser" method="post">
 
+{{-- <input type="hidden" name="_method" value="PUT"/> --}}
+
+<input type="hidden" name="_method" value="Delete"/>
+@csrf
     <input
         type="text"
         name="user"

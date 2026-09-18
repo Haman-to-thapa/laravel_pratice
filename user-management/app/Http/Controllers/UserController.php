@@ -11,9 +11,22 @@ class UserController extends Controller
 {
 
   
-  function get(Request $req){
-    return $req;
+  function get(){
+    return 'Get route method';
   }
+
+  function post(){
+    return 'post route method';
+  }
+
+  function put(){
+    return 'put route method';
+  }
+
+  function delete(){
+    return 'delete route method';
+  }
+
     //
     // function users() {
     //     // return"User function";

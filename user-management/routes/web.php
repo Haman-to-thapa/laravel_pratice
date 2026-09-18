@@ -24,3 +24,6 @@ Route::get('queires',[UserController::class,'queires']);
 Route::view('form', 'users');
 
 Route::get('newUser', [UserController::class, 'get']);
+Route::post('newUser', [UserController::class, 'get']);
+Route::put('newUser',[UserController::class,"put"]);
+Route::delete('newUser',[UserController::class,"delete"]);
